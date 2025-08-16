@@ -22277,6 +22277,7 @@ var require_protocol_colorProvider = __commonJS({
       ColorPresentationRequest3.method = "textDocument/colorPresentation";
       ColorPresentationRequest3.messageDirection = messages_1.MessageDirection.clientToServer;
       ColorPresentationRequest3.type = new messages_1.ProtocolRequestType(ColorPresentationRequest3.method);
+      ColorPresentationRequest3.capabilities = messages_1.CM.create("textDocument.colorProvider", "colorProvider");
     })(ColorPresentationRequest2 || (exports2.ColorPresentationRequest = ColorPresentationRequest2 = {}));
   }
 });
@@ -91887,7 +91888,7 @@ var init_workspace2 = __esm({
       }
       async showInfo() {
         let lines = [];
-        let version2 = workspace_default.version + (true ? "-13d0416 2025-07-31 16:32:31 +0800" : "");
+        let version2 = workspace_default.version + (true ? "-1e46b27 2025-08-11 13:24:12 +0800" : "");
         lines.push("## versions");
         lines.push("");
         let out = await this.nvim.call("execute", ["version"]);
